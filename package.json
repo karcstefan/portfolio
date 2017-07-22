@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-expect-file": "0.0.7",
+    "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
