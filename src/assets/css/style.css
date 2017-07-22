@@ -2,7 +2,7 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     overflow-x: hidden;
-    position:relative;
+    position: relative;
     color: #fff;
     font-weight: 600;
 }
@@ -33,6 +33,11 @@ body {
     z-index: 1;
 }
 
+.img-wrapper {
+    display: inline-block;
+    overflow: hidden;
+}
+
 #header .header-content {
     position: relative;
     z-index: 2;
@@ -47,25 +52,30 @@ body {
 #header .main-title {
     text-transform: uppercase;
     font-size: 3.5em;
+    letter-spacing: 2px;
+
 }
 
 #header .secondary-title {
     font-size: 1.8em;
     color: #eee;
 }
+
 #header .social-icons {
-    margin-top: 100px;
+    margin-top: 80px;
 }
-#header .social-icons ul, #header .section-toggle ul{
+
+#header .social-icons ul, #header .section-toggle ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 #header .social-icons ul li, #header .section-toggle ul li {
     display: inline-block;
 }
 
-#header .social-icons ul li a{
+#header .social-icons ul li a {
     color: #fff;
     margin-right: 30px;
     font-size: 2.5em;
@@ -73,9 +83,15 @@ body {
     border-radius: 5px;
 }
 
-#header .social-icons ul li a:hover{
+#header .social-icons ul li a:hover {
     background: #fff;
     color: #222;
+}
+
+#header .section-toggle ul li a {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #aaa;
 }
 
 #footer {
@@ -86,10 +102,43 @@ body {
     height: 5vh;
     background: #fff;
     overflow: hidden;
+    color: #000;
+}
+
+#footer .project-description {
+    background: #222;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#footer .footer-text {
+    padding: 15px 0
+}
+
+#footer .project-item {
+    margin-bottom: 10px;
+}
+
+#footer .project-item div:active, .active {
+    border: 2px solid #000;
+}
+
+#footer .project-item img {
+    transition: all .2s ease-in-out;
+}
+
+#footer .project-item img:hover {
+    transform: scale(1.1);
 }
 
 .text-colored {
     color: #204d74;
+}
+
+hr {
+    height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
 }
 
 /* Large Devices, Wide Screens */
