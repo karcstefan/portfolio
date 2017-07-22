@@ -1,10 +1,96 @@
 body {
     font-family: 'Raleway', sans-serif;
-    font-weight: 500;
     font-size: 16px;
     overflow-x: hidden;
+    position:relative;
+    color: #fff;
+    font-weight: 600;
 }
 
+#header {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+
+    background-image: url('../../assets/images/background.jpeg');
+    background-size: cover;
+    background-position: center center;
+
+    /*-webkit-filter: blur(5px);*/
+    /*-moz-filter: blur(5px);*/
+    /*-o-filter: blur(5px);*/
+    /*-ms-filter: blur(5px);*/
+    /*filter: blur(5px);*/
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#header .header-content {
+    position: relative;
+    z-index: 2;
+    padding: 200px 0;
+}
+
+#header .main-title, #header .secondary-title {
+    display: block;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+#header .main-title {
+    text-transform: uppercase;
+    font-size: 3.5em;
+}
+
+#header .secondary-title {
+    font-size: 1.8em;
+    color: #eee;
+}
+#header .social-icons {
+    margin-top: 100px;
+}
+#header .social-icons ul, #header .section-toggle ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#header .social-icons ul li, #header .section-toggle ul li {
+    display: inline-block;
+}
+
+#header .social-icons ul li a{
+    color: #fff;
+    margin-right: 30px;
+    font-size: 2.5em;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#header .social-icons ul li a:hover{
+    background: #fff;
+    color: #222;
+}
+
+#footer {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    height: 5vh;
+    background: #fff;
+    overflow: hidden;
+}
+
+.text-colored {
+    color: #204d74;
+}
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
