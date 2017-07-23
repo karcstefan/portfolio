@@ -26,26 +26,31 @@
         <div class="container">
             <div class="row">
                 <div class="header-text text-center">
-                    <span class="main-title">Ste<span class="text-colored">fan</span> Koteski</span>
+                    <span class="main-title">Ste<span class="text-colored">fan Kot</span>eski</span>
                     <span class="secondary-title">I build and break web apps</span>
                 </div>
 
                 <div class="social-icons text-center">
                     <ul>
-                        <li><a href="skype:stefan-koteski" target="_blank"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                        <li><a href="https://github.com/karcstefan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                        <li><a href="mailto:" style="padding-right: 0;margin-right: 0;" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="skype:stefan-koteski" target="_blank"><i class="fa fa-skype"
+                                                                              aria-hidden="true"></i></a></li>
+                        <li><a href="https://github.com/karcstefan" target="_blank"><i class="fa fa-github"
+                                                                                       aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/stefan-koteski-851954105" target="_blank"><i
+                                class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="mailto:" style="margin-right: 0;" target="_blank"><i
+                                class="fa fa-envelope" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
                 <div class="row">
-                    <hr class="col-xs-6 col-xs-offset-3"/>
+                    <!--<hr class="col-xs-6 col-xs-offset-3"/>-->
 
                 </div>
-                <div class="section-toggle text-center">
-                    <ul>
-                        <li><a href="#" data-toggle="project">Projects</a></li>
-                    </ul>
-                </div>
+                <!--<div class="section-toggle text-center">-->
+                    <!--<ul>-->
+                        <!--<li><a href="#" data-toggle="project">Projects</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
 
             </div>
         </div>
@@ -54,7 +59,7 @@
 
 <section id="footer" class="toggler">
     <div class="container">
-        <div class="text-center footer-text">Made with &hearts; <span class="pull-right" style="">&times;</span></div>
+        <div class="text-center footer-text">Made with &hearts;</div>
         <div class="project-section clearfix" style="color: #000;display: none">
             <div class="row">
                 <div class="project-item col-lg-3 col-xs-4">
@@ -81,97 +86,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
-<script>
-    window.Toggler = {
-        isToggled: false,
-        isChildToggled: false,
-        container: $('#footer'),
-        toggle: false,
-        sectionSelector: '.section-toggle a',
-        detailSelector: $('.project-item'),
-        detailContainer: $('.project-description'),
-        init: function () {
-            $(this.sectionSelector).click(this, this.onClickSection);
-            this.detailSelector.click(this, this.onClickDetail);
-        },
-        onClickDetail: function (event) {
-            var height;
-            if (event.data.isChildToggled) {
-                height = event.data.container.height() - event.data.detailContainer.height();
-                $(this).children('div').removeClass('active');
-                event.data.isChildToggled = false;
-            } else {
-                height = event.data.calculateHeight(event.data.detailContainer);
-                $('.active').removeClass('active');
-                $(this).children('div').addClass('active');
-                event.data.isChildToggled = true;
-            }
-
-            event.data.detailContainer.slideToggle();
-            event.data.animateContainer(height, false);
-        },
-        onClickSection: function (event) {
-            event.data.toggle = $(this).data('toggle');
-            event.data.toggle = $('.' + event.data.toggle + '-section');
-
-            if (!event.data.isToggled) {
-                event.data.toggle.show();
-                var height = event.data.calculateHeight(event.data.toggle);
-                event.data.animateContainer(height + 'px', false);
-                event.data.isToggled = true;
-            } else {
-                event.data.animateContainer('5vh', true);
-                event.data.isToggled = false;
-            }
-        },
-        calculateHeight: function (block) {
-            return this.container.height() + block.height();
-        },
-        animateContainer: function (height, hide) {
-            var that = this;
-            this.container.animate({height: height}, 350, function () {
-                if (hide) {
-                    console.log(123123);
-                    that.toggle.hide();
-                }
-            });
-        }
-    };
-
-    $('html').ready(function () {
-        window.Toggler.init();
-//        var toggled = false,
-//            toggle = false;
-//        $('.section-toggle a').click(function () {
-//            toggle = $(this).data('toggle');
-//            console.log(toggle);
-//            toggle = $('.' + toggle + '-section');
-//            var section = $('#footer');
-//
-//            if (!toggled) {
-//                toggle.show();
-//                var height = section.height() + toggle.height();
-//                section.animate({height: height + 'px'}, 350);
-//                toggled = true;
-//            } else {
-//                section.animate({height: '5vh'}, 350);
-//                toggle.hide();
-//
-//                toggled = false;
-//            }
-//        });
-//
-//        $('.project-item').click(function () {
-//            console.log($('.project-description').height());
-//            var height = $('.project-description').height();
-//            $('.project-description').slideToggle();
-//            var section = $('#footer');
-//            height = section.height() + height;
-//            console.log(section.height());
-//            console.log(height);
-//            section.animate({height: height + 'px'}, 350);
-//        });
-    });
-</script>
+<script src="assets/js/toggle.js"></script>
 </body>
 </html>
